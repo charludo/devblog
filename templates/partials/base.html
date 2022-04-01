@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	{{ seo_tags }}
+	<meta name="theme-color" content="#222222">
+	<link rel="stylesheet" href="/res/style.css" />
+	<link rel="stylesheet" href="/res/highlight/one-dark.css" />
+	{% block extra_css %}{% endblock %}
+</head>
+<body class="{{ body }}">
+	<div id="container">
+		<ul id="header">
+			<li><h2>blogname</h2></li>
+			<li>
+				<form id="themes">
+					<input type="radio" name="theme--toggle" id="toggle--light" value="theme--light"/>
+					<input type="radio" name="theme--toggle" id="toggle--dark" value="theme--dark"/>
+					<input type="radio" name="theme--toggle" id="toggle--rust" value="theme--rust"/>
+				</form>
+			</li>
+		</ul>
+		{% block body %}
+
+		{% endblock %}
+	</div>
+	<div id="snackbar">Link kopiert!</div>
+	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+	{% block extra_js %}{% endblock %}
+	<script src="/res/theme.js"></script>
+</body>
+</html>

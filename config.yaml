@@ -1,0 +1,17 @@
+ROOT:
+  DEV: /home/charlotte/Projekte/devblog
+  WEB: /var/www/devblog
+
+TIMESTAMPS:
+    FORMAT: "%Y-%m-%d"
+
+COLLECTIONS:
+    ACTIVE: true
+
+TOC:
+    LIST_ELEMENT: ol
+
+HIGHLIGHT:
+    ASSETS_DIR: res
+    LEXER: Rust
+    THEME: one-dark
