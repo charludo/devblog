@@ -16,6 +16,26 @@ $breakpoint-lg: 992px
 $breakpoint-xl: 1200px
 $breakpoint-xxl: 1600px
 
+@font-face
+	font-family: "Atkinson"
+	src: url('/res/fonts/AtkinsonHyperlegible-Regular.woff2')
+
+@font-face
+	font-family: "Atkinson"
+	font-weight: bold
+	src: url('/res/fonts/AtkinsonHyperlegible-Bold.woff2')
+
+@font-face
+	font-family: "Atkinson"
+	font-style: italic
+	src: url('/res/fonts/AtkinsonHyperlegible-Italic.woff2')
+
+@font-face
+	font-family: "Atkinson"
+	font-style: italic
+	font-weight: bold
+	src: url('/res/fonts/AtkinsonHyperlegible-BoldItalic.woff2')
+
 *
 	box-sizing: border-box
 	// transition-duration: .2s
@@ -27,7 +47,8 @@ body
 
 	min-height: 100vh
 
-	font-family: "Open Sans"
+	font-family: "Atkinson", "Open Sans"
+	font-size: 110%
 
 	background: $bg--light
 	color: $text--light
@@ -218,8 +239,7 @@ a, a:active, a:visited, a:hover
 .blogpost
 	.quickinfo
 		font-size: 85%
-		margin: 2em 0 0 0
-		line-height: 85%
+		margin: 2em 0 0.3em 0
 
 	h1, .toc-title
 		margin: 0
@@ -240,6 +260,10 @@ a, a:active, a:visited, a:hover
 
 	.comments
 		margin-top: 2em
+
+	.postbody img, .postbody picture
+		width: 100%
+		height: auto
 
 hl
 	font-size: 14px

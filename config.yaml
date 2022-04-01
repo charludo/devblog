@@ -15,3 +15,15 @@ HIGHLIGHT:
     ASSETS_DIR: res
     LEXER: Rust
     THEME: one-dark
+
+PIXELIZER:
+    TARGETS:
+        - lg 800 70
+        - md 600 65
+        - sm 400 60
+    LAYOUTS:
+        - "(max-width: 800px) 100vw"
+        - "800px"
+
+AUTO_SUMMARY:
+    KEYWORDS: true
