@@ -1,0 +1,10 @@
+{% extends "partials/base.html" %}
+
+{% block body %}
+	{{ title }}
+	{% for collectible in collectibles %}
+		{{ collectible["title"] }}
+		{{ collectible["preview"] }}
+		{{ collectible["href"] }}
+	{% endfor %}
+{% endblock %}
