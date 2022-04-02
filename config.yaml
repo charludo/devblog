@@ -30,8 +30,7 @@ AUTO_SEO:
 
 COLLECTIONS:
     PRIORITY: 990
-    PAGE: blog
-    OVERVIEW_TITLE: All Blogposts
-    OVERVIEW_CONTENT: /blog/overview.md
+    PAGE: tags
+    OVERVIEW_TITLE: List of all tags
     OVERVIEW_TEMPLATE: overview.html
     COLLECTION_TEMPLATE: tag.html

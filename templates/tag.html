@@ -1,10 +1,8 @@
 {% extends "partials/base.html" %}
 
 {% block body %}
-	{{ title }}
+	<h1>Blogposts tagged with "{{ title }}"</h1>
 	{% for collectible in collectibles %}
-		{{ collectible["title"] }}
-		{{ collectible["preview"] }}
-		{{ collectible["href"] }}
+		{% include "partials/preview.html" %}
 	{% endfor %}
 {% endblock %}

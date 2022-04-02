@@ -1,5 +1,7 @@
 ---
 title: Welcome!
+exhibits:
+  - featured
 ---
 
 # Welcome!

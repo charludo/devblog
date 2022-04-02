@@ -2,4 +2,10 @@
 
 {% block body %}
 	{{ content }}
+	{% for exhibit in exhibits %}
+		<!-- <h2>{{ exhibit }}</h2> -->
+		{% for collectible in exhibits[exhibit] %}
+			{% include "partials/preview.html" %}
+		{% endfor %}
+	{% endfor %}
 {% endblock %}
