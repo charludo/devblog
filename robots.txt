@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://default.com/sitemap.txt
+Sitemap: https://notablog.io/sitemap.txt

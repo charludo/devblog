@@ -3,18 +3,18 @@
      xmlns:atom="http://www.w3.org/2005/Atom"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>Default Website</title>
-    <link>https://default.com/rss/index.xml</link>
+    <title>notablog.</title>
+    <link>https://notablog.io/rss/index.xml</link>
 	<language>en-us</language>
 	<image>
-		<title>Default Website</title>
-		<link>https://default.com</link>
-		<url>https://default.com/res/favicon.ico</url>
-		<width>48</width>
-		<height>48</height>
+		<title>notablog.</title>
+		<link>https://notablog.io</link>
+		<url>https://notablog.io/res/favicon.ico</url>
+		<width>128</width>
+		<height>128</height>
 	</image>
-    <atom:link href="https://default.com/rss" rel="self" type="application/rss+xml" />
-    <description>Default blueprint description</description>
+    <atom:link href="https://notablog.io/rss" rel="self" type="application/rss+xml" />
+    <description>just an outlet for occasionally interesting personal side projects.</description>
     <pubDate>2022-04-03</pubDate>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
 	<category>technology</category>

@@ -1,4 +1,4 @@
-https://default.com/index.html
-https://default.com/blog/index.html
-https://default.com/blog/example/index.html
-https://default.com/blog/example2/index.html
+https://notablog.io/index.html
+https://notablog.io/blog/index.html
+https://notablog.io/blog/example/index.html
+https://notablog.io/blog/example2/index.html
