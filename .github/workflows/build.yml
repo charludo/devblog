@@ -23,7 +23,7 @@ jobs:
     - name: edit config.yaml and build
       run: |
         mv config.yaml old.yaml
-        echo "ROOT:\n    DEV: $(pwd)\n    WEB: $(dirname $(pwd))/webroot\n" > config.yaml
+        echo "ROOT:\n\tDEV: $(pwd)\n\tWEB: $(dirname $(pwd))/webroot\n" > config.yaml
         echo "$(tail -n +4 old.yaml)" >> config.yaml
         yes "n" | barely rebuild
 
