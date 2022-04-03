@@ -20,11 +20,13 @@ jobs:
     - name: Install barely
       run: |
         pip install barely
-    - name: edit config.yaml and build
+    - name: edit config.yaml
       run: |
         mv config.yaml old.yaml
         echo "ROOT:\n\tDEV: $(pwd)\n\tWEB: $(dirname $(pwd))/webroot\n" > config.yaml
         echo "$(tail -n +4 old.yaml)" >> config.yaml
+        cat config.yaml
+    - name: build project
         yes "n" | barely rebuild
 
     - name: Push
