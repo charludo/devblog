@@ -57,8 +57,8 @@ body
 	background: $bg--light
 	color: $text--light
 
-	.accent, .accent:hover, .hoveraccent:hover
-		color: $accent--light
+	.accent, .accent:hover, .accent:active, .accent:visited .hoveraccent:hover
+		color: $accent--light !important
 
 	.unfocus
 		opacity: .75
@@ -96,7 +96,7 @@ body
 	@media (prefers-color-scheme: dark)
 		background: $bg--dark
 		color: $text--dark
-		.accent, .accent:hover, .hoveraccent:hover
+		.accent, .accent:hover, .accent:active, .accent:visited .hoveraccent:hover
 			color: $accent--dark
 
 		blockquote
@@ -124,7 +124,7 @@ body
 	&.theme--light
 		background: $bg--light
 		color: $text--light
-		.accent, .accent:hover, .hoveraccent:hover
+		.accent, .accent:hover, .accent:active, .accent:visited .hoveraccent:hover
 			color: $accent--light
 
 		blockquote
@@ -155,7 +155,7 @@ body
 	&.theme--dark
 		background: $bg--dark
 		color: $text--dark
-		.accent, .accent:hover, .hoveraccent:hover
+		.accent, .accent:hover, .accent:active, .accent:visited .hoveraccent:hover
 			color: $accent--dark
 
 		blockquote
@@ -183,7 +183,7 @@ body
 	&.theme--rust
 		background: $bg--rust
 		color: $text--rust
-		.accent, .accent:hover, .hoveraccent:hover
+		.accent, .accent:hover, .accent:active, .accent:visited .hoveraccent:hover
 			color: $accent--rust
 
 		blockquote
