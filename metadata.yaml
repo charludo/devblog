@@ -1,7 +1,10 @@
-site_url: https://default.com
-site_name: Default Website
-site_description: Default blueprint description
+site_url: https://notablog.io
+site_name: notablog.
+site_description: just an outlet for occasionally interesting personal side projects.
 site_keywords:
-    - default
-    - blueprints
+    - developer blog
+    - rust
+    - python
+    - bevy
 favicon: /res/favicon.ico
+title_image: /res/socialcover.png
