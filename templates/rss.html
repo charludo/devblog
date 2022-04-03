@@ -24,8 +24,8 @@
        <title>{{ item.title }}</title>
        <description>{{ item.preview|safe }}</description>
        <pubDate>{{ item.date }}</pubDate>
-       <guid isPermaLink="true">{{ item.href }}</guid>
-       <link>{{ item.href }}</link>
+       <guid isPermaLink="true">{{ site_url }}{{ item.href }}</guid>
+       <link>{{ site_url }}{{ item.href }}</link>
        <dc:creator><![CDATA[Charlotte]]></dc:creator>
     </item>
     {% endfor %}
