@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Default Website</title>
+    <link>https://default.com/rss/index.xml</link>
+	<language>en-us</language>
+	<image>
+		<title>Default Website</title>
+		<link>https://default.com</link>
+		<url>https://default.com/res/favicon.ico</url>
+		<width>48</width>
+		<height>48</height>
+	</image>
+    <atom:link href="https://default.com/rss" rel="self" type="application/rss+xml" />
+    <description>Default blueprint description</description>
+    <pubDate>2022-04-03</pubDate>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+	<category>technology</category>
+
+    
+    <item>
+       <title>Example Blogpost2</title>
+       <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</description>
+       <pubDate>2022-04-03</pubDate>
+       <guid isPermaLink="true">/blog/example2/index.html</guid>
+       <link>/blog/example2/index.html</link>
+       <dc:creator><![CDATA[Charlotte]]></dc:creator>
+    </item>
+    
+    <item>
+       <title>Example Blogpost</title>
+       <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</description>
+       <pubDate>2022-04-03</pubDate>
+       <guid isPermaLink="true">/blog/example/index.html</guid>
+       <link>/blog/example/index.html</link>
+       <dc:creator><![CDATA[Charlotte]]></dc:creator>
+    </item>
+    
+  </channel>
+</rss>
