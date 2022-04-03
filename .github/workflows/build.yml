@@ -26,6 +26,7 @@ jobs:
         echo -e "ROOT:\n  DEV: $(pwd)\n  WEB: $(dirname $(pwd))/webroot\n" > config.yaml
         echo "$(tail -n +4 old.yaml)" >> config.yaml
         cat config.yaml
+        rm old.yaml
     - name: build project
       run: |
         yes "n" | barely rebuild
