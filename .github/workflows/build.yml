@@ -23,7 +23,7 @@ jobs:
     - name: edit config.yaml
       run: |
         mv config.yaml old.yaml
-        echo "ROOT:\n\tDEV: $(pwd)\n\tWEB: $(dirname $(pwd))/webroot\n" > config.yaml
+        echo -e "ROOT:\n  DEV: $(pwd)\n  WEB: $(dirname $(pwd))/webroot\n" > config.yaml
         echo "$(tail -n +4 old.yaml)" >> config.yaml
         cat config.yaml
     - name: build project
