@@ -6,7 +6,7 @@ TIMESTAMPS:
     FORMAT: "%Y-%m-%d"
 
 TOC:
-    LIST_ELEMENT: ol
+    LIST_ELEMENT: ul
     MIN_DEPTH: 2
 
 HIGHLIGHT:

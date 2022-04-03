@@ -56,7 +56,7 @@ body
 
 	background: $bg--light
 	color: $text--light
-	.accent, .hoveraccent:hover
+	.accent, .accent:hover, .hoveraccent:hover
 		color: $accent--light
 
 	.unfocus
@@ -95,7 +95,7 @@ body
 	@media (prefers-color-scheme: dark)
 		background: $bg--dark
 		color: $text--dark
-		.accent, .hoveraccent:hover
+		.accent, .accent:hover, .hoveraccent:hover
 			color: $accent--dark
 
 		blockquote
@@ -123,7 +123,7 @@ body
 	&.theme--light
 		background: $bg--light
 		color: $text--light
-		.accent, .hoveraccent:hover
+		.accent, .accent:hover, .hoveraccent:hover
 			color: $accent--light
 
 		blockquote
@@ -154,7 +154,7 @@ body
 	&.theme--dark
 		background: $bg--dark
 		color: $text--dark
-		.accent, .hoveraccent:hover
+		.accent, .accent:hover, .hoveraccent:hover
 			color: $accent--dark
 
 		blockquote
@@ -182,7 +182,7 @@ body
 	&.theme--rust
 		background: $bg--rust
 		color: $text--rust
-		.accent, .hoveraccent:hover
+		.accent, .accent:hover, .hoveraccent:hover
 			color: $accent--rust
 
 		blockquote
@@ -302,6 +302,13 @@ hl
 	margin: 0
 	padding: 0
 
+	h2
+		a
+			color: $text--light
+			@media (prefers-color-scheme: dark)
+				color: $text--dark
+
+
 	li
 		a
 			margin-right: .5em
@@ -398,6 +405,9 @@ hl
 			&:after
 				background-color: $bg--dark
 
+	#header h2 a
+		color: $text--light
+
 .theme--dark
 	#toggle--dark
 		border: 3px solid $accent--dark
@@ -410,11 +420,17 @@ hl
 			&:after
 				background-color: $bg--light
 
+	#header h2 a
+		color: $text--dark
+
 .theme--rust
 	#toggle--rust
 		border: 3px solid $accent--rust
 		&:after
 			background-color: $accent--rust
+
+	#header h2 a
+		color: $text--rust
 
 	@media (prefers-color-scheme: dark)
 		#toggle--dark
@@ -422,12 +438,12 @@ hl
 			&:after
 				background-color: $bg--dark
 
+
 	@media (prefers-color-scheme: light)
 		#toggle--light
 			border: none
 			&:after
 				background-color: $bg--light
-
 #snackbar
 	visibility: hidden
 	opacity: 0
