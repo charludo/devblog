@@ -1,4 +1,9 @@
 https://default.com/index.html
+https://default.com/tags/index.html
+https://default.com/tags/featured/index.html
+https://default.com/tags/col2/index.html
+https://default.com/tags/all/index.html
+https://default.com/tags/col1/index.html
 https://default.com/blog/index.html
 https://default.com/blog/example/index.html
 https://default.com/blog/example2/index.html
