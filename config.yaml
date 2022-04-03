@@ -7,6 +7,7 @@ TIMESTAMPS:
 
 TOC:
     LIST_ELEMENT: ol
+    MIN_DEPTH: 2
 
 HIGHLIGHT:
     ASSETS_DIR: res
