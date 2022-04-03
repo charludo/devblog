@@ -19,7 +19,7 @@ jobs:
         python-version: 3.9
     - name: Install barely
       run: |
-        pip install barely
+        pip install -u barely
     - name: edit config.yaml
       run: |
         mv config.yaml old.yaml
