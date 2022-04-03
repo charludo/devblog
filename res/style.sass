@@ -19,22 +19,26 @@ $breakpoint-xxl: 1600px
 @font-face
 	font-family: "Atkinson"
 	src: url('/res/fonts/AtkinsonHyperlegible-Regular.woff2')
+	font-display: swap
 
 @font-face
 	font-family: "Atkinson"
 	font-weight: bold
 	src: url('/res/fonts/AtkinsonHyperlegible-Bold.woff2')
+	font-display: swap
 
 @font-face
 	font-family: "Atkinson"
 	font-style: italic
 	src: url('/res/fonts/AtkinsonHyperlegible-Italic.woff2')
+	font-display: swap
 
 @font-face
 	font-family: "Atkinson"
 	font-style: italic
 	font-weight: bold
 	src: url('/res/fonts/AtkinsonHyperlegible-BoldItalic.woff2')
+	font-display: swap
 
 *
 	box-sizing: border-box
@@ -56,7 +60,7 @@ body
 		color: $accent--light
 
 	.unfocus
-		opacity: .6
+		opacity: .75
 
 	blockquote
 		border-left: 6px solid
@@ -222,16 +226,20 @@ a, a:active, a:visited, a:hover
 	border-bottom: 1px dotted
 
 .socials
-	margin: 1.5em 0
-	a
+	margin: 1em 0
+	a, div
 		border-bottom: none
 		cursor: pointer
+		display: inline-block
+		margin-right: 0px
 		img
 			transition-duration: 0s
+			width: 28px
+			height: 28px
 			// transition-property: transformY
 		img:hover
 			// transform: translateY(-20%)
-			transform: scale(110%)
+			transform: scale(115%)
 
 .noborder, .noborder:active, .noborder:visited, .noborder:hover
 	border: none
@@ -252,7 +260,7 @@ a, a:active, a:visited, a:hover
 		padding: 0
 		margin: 0
 		ul, ol
-			padding: 0 16px
+			padding: 4px 16px 0 16px
 			margin: 0
 			list-style: square
 			li
@@ -308,6 +316,8 @@ hl
 
 
 	#themes
+		label
+			display: none
 		input[type="radio"]
 			position: relative
 			-webkit-appearance: none
@@ -319,6 +329,7 @@ hl
 			height: 24px
 			border-radius: 50%
 			cursor: pointer
+			padding: 8px
 
 			&:after
 				content: ""
