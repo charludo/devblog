@@ -8,3 +8,4 @@ site_keywords:
     - bevy
 favicon: /res/favicon.ico
 title_image: /res/socialcover.png
+blogrepo: devblog
