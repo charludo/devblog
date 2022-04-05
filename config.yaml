@@ -16,12 +16,12 @@ HIGHLIGHT:
 
 PIXELIZER:
     TARGETS:
-        - lg 800 75
-        - md 600 70
-        - sm 400 65
+        - lg 660 75
+        - md 510 70
+        - sm 360 65
     LAYOUTS:
         - "(max-width: 800px) 100vw"
-        - "800px"
+        - "660px"
 
 AUTO_SUMMARY:
     KEYWORDS: true
@@ -35,3 +35,5 @@ COLLECTIONS:
     OVERVIEW_TITLE: List of all tags
     OVERVIEW_TEMPLATE: overview.html
     COLLECTION_TEMPLATE: tag.html
+    ORDER_KEY: date
+    ORDER_REVERSE: true
