@@ -2,7 +2,7 @@
 
 {% block body %}
 <div class="blogpost">
-	<p class="quickinfo"><span class="unfocus">{{ created }}{% if edited != created %} (edited: {{ edited }}){% endif %}</span>{% if collections %} / <a class="accent noborder" href="/tags/{{ collections[0] }}">#{{ collections[0] }}</a>{% endif %} /
+	<p class="quickinfo"><span class="unfocus">{{ created }}{% if edited != created %} (ed. {{ edited }}){% endif %}</span>{% if collections %} / <a class="accent noborder" href="/tags/{{ collections[0] }}">#{{ collections[0] }}</a>{% endif %} /
 		<span class="unfocus">{{ reading_time }} min</span>
 	</p>
 	<h1>{{ title }}</h1>
