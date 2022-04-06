@@ -2,3 +2,8 @@ https://notablog.io/index.html
 https://notablog.io/blog/index.html
 https://notablog.io/blog/example/index.html
 https://notablog.io/blog/example2/index.html
+https://notablog.io/tags/index.html
+https://notablog.io/tags/all/index.html
+https://notablog.io/tags/col2/index.html
+https://notablog.io/tags/col1/index.html
+https://notablog.io/tags/featured/index.html
