@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Building a blog with barely | notablog.</title>
 <meta name="description" content="Building a blog upon the foundations of a static site generator might appear to be counterintuitive. After all, aren't frequent updates the point, and blogs th" />
-<meta name="keywords" content="bevy, desire ./ p h3table, :/ p ul licloning, div class =& quot, python, blueprint ./ p ptry, appropriately ./ p h2setting, rust, quot ;] }} {{, developer blog" />
+<meta name="keywords" content="quot ;] }} {{, div class =& quot, desire ./ p h3table, blueprint ./ p ptry, rust, python, :/ p ul licloning, developer blog, appropriately ./ p h2setting, bevy" />
 <meta name="robots" content="all" />
 <link rel="shortcut icon" type="image/x-icon" href="/res/favicon.ico">
 <meta property="og:title" content="Building a blog with barely">
@@ -127,9 +127,9 @@
 <p>If we have a look in the <code>config.yaml</code> file, we can see that right now, it only contains information on where our project lives:</p>
 <hl><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hlnt">ROOT</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">DEV</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;/path/to/devroot&quot;</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">WEB</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;/path/to/webroot&quot;</span><span class="hlw"></span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hln">ROOT</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">DEV</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;/path/to/devroot&quot;</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">WEB</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;/path/to/webroot&quot;</span><span class="hlw"></span>
 </pre></div>
 </td></tr></table></hl>
 <p>We will gradually be extending this file with the configuration of a number of the plugins barely ships with. Let us start simple, however: with a &quot;Hello World!&quot; blog post.</p>
@@ -175,8 +175,8 @@ This is the content of our &quot;Hello World&quot; post!
 <p>A common feature in blogs are created on / edited on timestamps. These are helpful to your readers to allow them to quickly gauge whether a post is still relevant to them (&quot;The hottest Windows tips &amp; tricks - written 1999-12-01&quot; is probably not what they are looking for in 2022, for example...)</p>
 <p>An easy way to convey this information is to add a <code>created</code> field below our title:</p>
 <hl><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hlnt">title</span><span class="hlp">:</span><span class="hlw">  </span><span class="hls">&quot;Hello</span><span class="hlnv"> </span><span class="hls">World!&quot;</span><span class="hlw"></span>
-<span class="hlnt">created</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;2022-04-01&quot;</span><span class="hlw"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hln">title</span><span class="hlp">:</span><span class="hlw">  </span><span class="hls">&quot;Hello World!&quot;</span><span class="hlw"></span>
+<span class="hln">created</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;2022-04-01&quot;</span><span class="hlw"></span>
 </pre></div>
 </td></tr></table></hl>
 <p>which may then be displayed in the post template:</p>
@@ -191,8 +191,8 @@ This is the content of our &quot;Hello World&quot; post!
 </td></tr></table></hl>
 <p>However, an even easier way is to enable the Timestamps plugin included in barely, which provides created and edited timestamps. In your <code>config.yaml</code>, add:</p>
 <hl><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hlnt">TIMESTAMPS</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">FORMAT</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;%Y-%m-%d&quot;</span><span class="hlw"></span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hln">TIMESTAMPS</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">FORMAT</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;%Y-%m-%d&quot;</span><span class="hlw"></span>
 </pre></div>
 </td></tr></table></hl>
 <p>We would like to always display the created date, but only display the edited date if it diverges from the creation timestamp. Thankfully, jinja allows for conditional blocks:</p>
@@ -219,9 +219,9 @@ This is the content of our &quot;Hello World&quot; post!
 <p>For our blog, I have decided to never use <code>&lt;h1&gt;</code> headings within the post body. This size is reserved for the title of the post. The ToC doesn't know this, so an unnecessary layer is currently being generated. Additionally, I'd like to use ordered (numbered) lists instead of unordered (bullet point) lists. Appending the config with</p>
 <hl><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hlnt">TOC</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">LIST_ELEMENT</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;ol&quot;</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">MIN_DEPTH</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">2</span><span class="hlw"></span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hln">TOC</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">LIST_ELEMENT</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;ol&quot;</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">MIN_DEPTH</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlmi">2</span><span class="hlw"></span>
 </pre></div>
 </td></tr></table></hl>
 <p>has the desired effects.</p>
@@ -235,13 +235,13 @@ This is the content of our &quot;Hello World&quot; post!
 <span class="normal">4</span>
 <span class="normal">5</span>
 <span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hlnt">COLLECTIONS</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">PAGE</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;tags&quot;</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">COLLECTION_TEMPLATE</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;tag.html&quot;</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">OVERVIEW_TEMPLATE</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;overview.html&quot;</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">OVERVIEW_TITLE</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;List</span><span class="hlnv"> </span><span class="hls">of</span><span class="hlnv"> </span><span class="hls">all</span><span class="hlnv"> </span><span class="hls">tags&quot;</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">ORDER_KEY</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;date&quot;</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">ORDER_REVERSE</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">true</span><span class="hlw"></span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hln">COLLECTIONS</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">PAGE</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;tags&quot;</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">COLLECTION_TEMPLATE</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;tag.html&quot;</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">OVERVIEW_TEMPLATE</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;overview.html&quot;</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">OVERVIEW_TITLE</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;List of all tags&quot;</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">ORDER_KEY</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;date&quot;</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">ORDER_REVERSE</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlkc">true</span><span class="hlw"></span>
 </pre></div>
 </td></tr></table></hl>
 <p>Alright, what are saying here? First, we tell the plugin that the path to the category pages is <code>/tags/</code>. Each individual collection page should be rendered using the <code>tag.html</code> template, which looks like this:</p>
@@ -297,11 +297,11 @@ This is the content of our &quot;Hello World&quot; post!
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hlnt">title</span><span class="hlp">:</span><span class="hlw">  </span><span class="hls">&quot;Hello</span><span class="hlnv"> </span><span class="hls">World!&quot;</span><span class="hlw"></span>
-<span class="hlnt">created</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;2022-04-01&quot;</span><span class="hlw"></span>
-<span class="hlnt">collections</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlp hlp-Indicator">-</span><span class="hlw"> </span><span class="hls">&quot;collection1&quot;</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlp hlp-Indicator">-</span><span class="hlw"> </span><span class="hls">&quot;collection2&quot;</span><span class="hlw"></span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hln">title</span><span class="hlp">:</span><span class="hlw">  </span><span class="hls">&quot;Hello World!&quot;</span><span class="hlw"></span>
+<span class="hln">created</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;2022-04-01&quot;</span><span class="hlw"></span>
+<span class="hln">collections</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hlerr">-</span><span class="hlw"> </span><span class="hls">&quot;collection1&quot;</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hlerr">-</span><span class="hlw"> </span><span class="hls">&quot;collection2&quot;</span><span class="hlw"></span>
 </pre></div>
 </td></tr></table></hl>
 <p>After saving, the changes won't immediately be available. That's because barely waits until shutting down to gather all collectibles, to make sure none is missed. Simply <code>Ctrl+C</code> in your console, then run <code>barely</code> again, and three new pages will have become available: <code>/tags/</code>, <code>/tags/collection1/</code>, and <code>/tags/collection2/</code>.</p>
@@ -362,43 +362,43 @@ This is the content of our &quot;Hello World&quot; post!
 <span class="normal">34</span>
 <span class="normal">35</span>
 <span class="normal">36</span>
-<span class="normal">37</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hlnt">name</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">build</span><span class="hlw"></span>
-<span class="hlnt">on</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">push</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">    </span><span class="hlnt">branches</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlp hlp-Indicator">[</span><span class="hlw"> </span><span class="hlnv">main</span><span class="hlw"> </span><span class="hlp hlp-Indicator">]</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">pull_request</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">    </span><span class="hlnt">branches</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlp hlp-Indicator">[</span><span class="hlw"> </span><span class="hlnv">main</span><span class="hlw"> </span><span class="hlp hlp-Indicator">]</span><span class="hlw"></span>
-<span class="hlnt">jobs</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">  </span><span class="hlnt">build</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">    </span><span class="hlnt">runs-on</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">ubuntu-latest</span><span class="hlw"></span>
-<span class="hlw">    </span><span class="hlnt">steps</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">    </span><span class="hlp hlp-Indicator">-</span><span class="hlw"> </span><span class="hlnt">uses</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">actions/checkout@v2</span><span class="hlw"></span>
-<span class="hlw">    </span><span class="hlp hlp-Indicator">-</span><span class="hlw"> </span><span class="hlnt">name</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">Set up Python 3.9</span><span class="hlw"></span>
-<span class="hlw">      </span><span class="hlnt">uses</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">actions/setup-python@v2</span><span class="hlw"></span>
-<span class="hlw">      </span><span class="hlnt">with</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlnt">python-version</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">3.9</span><span class="hlw"></span>
-<span class="hlw">    </span><span class="hlp hlp-Indicator">-</span><span class="hlw"> </span><span class="hlnt">name</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">Install barely</span><span class="hlw"></span>
-<span class="hlw">      </span><span class="hlnt">run</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlp hlp-Indicator">|</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlno">pip install --upgrade barely</span><span class="hlw"></span>
-<span class="hlw">    </span><span class="hlp hlp-Indicator">-</span><span class="hlw"> </span><span class="hlnt">name</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">edit config.yaml</span><span class="hlw"></span>
-<span class="hlw">      </span><span class="hlnt">run</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlp hlp-Indicator">|</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlno">mv config.yaml old.yaml</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlno">echo -e &quot;ROOT:\n  DEV: $(pwd)\n  WEB: $(dirname $(pwd))/webroot\n&quot; &gt; config.yaml</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlno">echo &quot;$(tail -n +4 old.yaml)&quot; &gt;&gt; config.yaml</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlno">cat config.yaml</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlno">rm old.yaml</span><span class="hlw"></span>
-<span class="hlw">    </span><span class="hlp hlp-Indicator">-</span><span class="hlw"> </span><span class="hlnt">name</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">build project</span><span class="hlw"></span>
-<span class="hlw">      </span><span class="hlnt">run</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlp hlp-Indicator">|</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlno">yes &quot;n&quot; | barely rebuild</span><span class="hlw"></span>
+<span class="normal">37</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hln">name</span><span class="hlp">:</span><span class="hlw"> </span><span class="hln">build</span><span class="hlw"></span>
+<span class="hln">on</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">push</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">    </span><span class="hln">branches</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlp">[</span><span class="hlw"> </span><span class="hln">main</span><span class="hlw"> </span><span class="hlp">]</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">pull_request</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">    </span><span class="hln">branches</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlp">[</span><span class="hlw"> </span><span class="hln">main</span><span class="hlw"> </span><span class="hlp">]</span><span class="hlw"></span>
+<span class="hln">jobs</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">  </span><span class="hln">build</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">    </span><span class="hln">runs-on</span><span class="hlp">:</span><span class="hlw"> </span><span class="hln">ubuntu-latest</span><span class="hlw"></span>
+<span class="hlw">    </span><span class="hln">steps</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">    </span><span class="hlerr">-</span><span class="hlw"> </span><span class="hln">uses</span><span class="hlp">:</span><span class="hlw"> </span><span class="hln">actions</span><span class="hlerr">/</span><span class="hln">checkout</span><span class="hlerr">@</span><span class="hln">v2</span><span class="hlw"></span>
+<span class="hlw">    </span><span class="hlerr">-</span><span class="hlw"> </span><span class="hln">name</span><span class="hlp">:</span><span class="hlw"> </span><span class="hln">Set</span><span class="hlw"> </span><span class="hln">up</span><span class="hlw"> </span><span class="hln">Python</span><span class="hlw"> </span><span class="hlmf">3.9</span><span class="hlw"></span>
+<span class="hlw">      </span><span class="hln">uses</span><span class="hlp">:</span><span class="hlw"> </span><span class="hln">actions</span><span class="hlerr">/</span><span class="hln">setup-python</span><span class="hlerr">@</span><span class="hln">v2</span><span class="hlw"></span>
+<span class="hlw">      </span><span class="hln">with</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">python-version</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlmf">3.9</span><span class="hlw"></span>
+<span class="hlw">    </span><span class="hlerr">-</span><span class="hlw"> </span><span class="hln">name</span><span class="hlp">:</span><span class="hlw"> </span><span class="hln">Install</span><span class="hlw"> </span><span class="hln">barely</span><span class="hlw"></span>
+<span class="hlw">      </span><span class="hln">run</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlerr">|</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">pip</span><span class="hlw"> </span><span class="hln">install</span><span class="hlw"> </span><span class="hlerr">--</span><span class="hln">upgrade</span><span class="hlw"> </span><span class="hln">barely</span><span class="hlw"></span>
+<span class="hlw">    </span><span class="hlerr">-</span><span class="hlw"> </span><span class="hln">name</span><span class="hlp">:</span><span class="hlw"> </span><span class="hln">edit</span><span class="hlw"> </span><span class="hln">config</span><span class="hlp">.</span><span class="hln">yaml</span><span class="hlw"></span>
+<span class="hlw">      </span><span class="hln">run</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlerr">|</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">mv</span><span class="hlw"> </span><span class="hln">config</span><span class="hlp">.</span><span class="hln">yaml</span><span class="hlw"> </span><span class="hln">old</span><span class="hlp">.</span><span class="hln">yaml</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">echo</span><span class="hlw"> </span><span class="hlerr">-</span><span class="hln">e</span><span class="hlw"> </span><span class="hls">&quot;ROOT:\n  DEV: $(pwd)\n  WEB: $(dirname $(pwd))/webroot\n&quot;</span><span class="hlw"> </span><span class="hlerr">&gt;</span><span class="hlw"> </span><span class="hln">config</span><span class="hlp">.</span><span class="hln">yaml</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">echo</span><span class="hlw"> </span><span class="hls">&quot;$(tail -n +4 old.yaml)&quot;</span><span class="hlw"> </span><span class="hlerr">&gt;&gt;</span><span class="hlw"> </span><span class="hln">config</span><span class="hlp">.</span><span class="hln">yaml</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">cat</span><span class="hlw"> </span><span class="hln">config</span><span class="hlp">.</span><span class="hln">yaml</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">rm</span><span class="hlw"> </span><span class="hln">old</span><span class="hlp">.</span><span class="hln">yaml</span><span class="hlw"></span>
+<span class="hlw">    </span><span class="hlerr">-</span><span class="hlw"> </span><span class="hln">name</span><span class="hlp">:</span><span class="hlw"> </span><span class="hln">build</span><span class="hlw"> </span><span class="hln">project</span><span class="hlw"></span>
+<span class="hlw">      </span><span class="hln">run</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlerr">|</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">yes</span><span class="hlw"> </span><span class="hls">&quot;n&quot;</span><span class="hlw"> </span><span class="hlerr">|</span><span class="hlw"> </span><span class="hln">barely</span><span class="hlw"> </span><span class="hln">rebuild</span><span class="hlw"></span>
 
-<span class="hlw">    </span><span class="hlp hlp-Indicator">-</span><span class="hlw"> </span><span class="hlnt">name</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">Push</span><span class="hlw"></span>
-<span class="hlw">      </span><span class="hlnt">uses</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">s0/git-publish-subdir-action@develop</span><span class="hlw"></span>
-<span class="hlw">      </span><span class="hlnt">env</span><span class="hlp">:</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlnt">REPO</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">self</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlnt">BRANCH</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">build</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlnt">FOLDER</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">../webroot</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlnt">GITHUB_TOKEN</span><span class="hlp">:</span><span class="hlw"> </span><span class="hll hll-Scalar hll-Scalar-Plain">${{ secrets.GITHUB_TOKEN }}</span><span class="hlw"></span>
-<span class="hlw">        </span><span class="hlnt">MESSAGE</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;Build:</span><span class="hlnv"> </span><span class="hls">({sha})</span><span class="hlnv"> </span><span class="hls">{msg}&quot;</span><span class="hlw"></span>
+<span class="hlw">    </span><span class="hlerr">-</span><span class="hlw"> </span><span class="hln">name</span><span class="hlp">:</span><span class="hlw"> </span><span class="hln">Push</span><span class="hlw"></span>
+<span class="hlw">      </span><span class="hln">uses</span><span class="hlp">:</span><span class="hlw"> </span><span class="hln">s0</span><span class="hlerr">/</span><span class="hln">git-publish-subdir-action</span><span class="hlerr">@</span><span class="hln">develop</span><span class="hlw"></span>
+<span class="hlw">      </span><span class="hln">env</span><span class="hlp">:</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">REPO</span><span class="hlp">:</span><span class="hlw"> </span><span class="hln">self</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">BRANCH</span><span class="hlp">:</span><span class="hlw"> </span><span class="hln">build</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">FOLDER</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlp">..</span><span class="hlerr">/</span><span class="hln">webroot</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">GITHUB_TOKEN</span><span class="hlp">:</span><span class="hlw"> </span><span class="hlerr">$</span><span class="hlp">{{</span><span class="hlw"> </span><span class="hln">secrets</span><span class="hlp">.</span><span class="hln">GITHUB_TOKEN</span><span class="hlw"> </span><span class="hlp">}}</span><span class="hlw"></span>
+<span class="hlw">        </span><span class="hln">MESSAGE</span><span class="hlp">:</span><span class="hlw"> </span><span class="hls">&quot;Build: ({sha}) {msg}&quot;</span><span class="hlw"></span>
 </pre></div>
 </td></tr></table></hl>
 <h3 id="host-the-build-with-cloudflare">Host the build with Cloudflare</h3>

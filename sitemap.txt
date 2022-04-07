@@ -1,8 +1,3 @@
 https://notablog.io/index.html
 https://notablog.io/blog/index.html
 https://notablog.io/blog/2022-04-01-building-a-blog-with-barely/index.html
-https://notablog.io/tags/index.html
-https://notablog.io/tags/python/index.html
-https://notablog.io/tags/all/index.html
-https://notablog.io/tags/barely/index.html
-https://notablog.io/tags/featured/index.html
