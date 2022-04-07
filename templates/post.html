@@ -2,7 +2,7 @@
 
 {% block body %}
 <div class="blogpost">
-	<p class="quickinfo"><span class="unfocus">{{ created }}{% if edited != created %} (ed. {{ edited }}){% endif %}</span>{% if collections %} / <a class="accent noborder" href="/tags/{{ collections[0] }}">#{{ collections[0] }}</a>{% endif %} /
+	<p class="quickinfo"><span class="unfocus">{{ created }}{% if ed and ed|string != created|string %} (ed. {{ ed }}){% endif %}</span>{% if collections %} / <a class="accent noborder" href="/tags/{{ collections[0] }}">#{{ collections[0] }}</a>{% endif %} /
 		<span class="unfocus">{{ reading_time }} min</span>
 	</p>
 	<h1>{{ title }}</h1>
@@ -15,14 +15,14 @@
 	{% endif %}
 	{% if gitalong %}
 	<blockquote>
-		<p>All code examples are available in <a href="{{ gitalong }}" target="_blank">this GitHub repository</a>!</p>
+		<p>All code examples are available in <a href="https://github.com/charludo/{{ gitalong }}/" target="_blank">this GitHub repository</a>!</p>
 	</blockquote>
 	{% endif %}
 	<div class="postbody">
-		{{ content }}
+		{{ content|replace("<a", '<a target="_blank"') }}
 	</div>
 	<blockquote class="comments">
-		<p>This is a 100% static website. Therefore, no direct commenting method is available. However, feel free to <a href="https://github.com/charludo/{{ blogrepo }}/discussions/new?title={{ title }}" target="_blank">discuss this article on GitHub</a>!
+		<p>This is a 100% static website. Therefore, no direct commenting method is available. However, feel free to <a href="https://github.com/charludo/blogrepo/discussions/new?title=Re: {{ title }}" target="_blank">discuss this article on GitHub</a>!
 		</p>
 	</blockquote>
 	<div class="tags">
