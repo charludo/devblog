@@ -187,7 +187,7 @@ Neat!
 ### Other features
 These were the most important blog-specific features. There's loads of other stuff you might want to add: automatic resizing of pictures, automatic SEO, lexing & highlighting of code snippets,...
 
-These are not really blog specific however, and are covered in detail [here](https://buildwithbarely.org/features/)!
+These are not really blog specific however, and are covered in detail [on barely's website](https://buildwithbarely.org/features/)!
 
 ## Comments & Search
 "Hold up!" you might say at this point. "There's something missing! What about comments, and search functionality?" And you'd be right - we have not implemented these yet. However, that's less of an issue with barely, and more an issue of the nature of static websites.
