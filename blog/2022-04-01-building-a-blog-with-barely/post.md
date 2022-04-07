@@ -30,7 +30,7 @@ $ barely rebuild -s
 Your favorite browser should open and greet you with the rendered version of the project. Any changes you make from now on will immediately be reflected in the browser.
 
 If we have a look in the `config.yaml` file, we can see that right now, it only contains information on where our project lives:
-```yaml
+```toml
 ROOT:
   DEV: "/path/to/devroot"
   WEB: "/path/to/webroot"
@@ -73,7 +73,7 @@ Alright, a title and some content are good, but not exactly a fully featured blo
 A common feature in blogs are created on / edited on timestamps. These are helpful to your readers to allow them to quickly gauge whether a post is still relevant to them ("The hottest Windows tips & tricks - written 1999-12-01" is probably not what they are looking for in 2022, for example...)
 
 An easy way to convey this information is to add a `created` field below our title:
-```yaml
+```toml
 title:  "Hello World!"
 created: "2022-04-01"
 ```
@@ -86,7 +86,7 @@ which may then be displayed in the post template:
 ```
 
 However, an even easier way is to enable the Timestamps plugin included in barely, which provides created and edited timestamps. In your `config.yaml`, add:
-```yaml
+```toml
 TIMESTAMPS:
   FORMAT: "%Y-%m-%d"
 ```
@@ -116,7 +116,7 @@ With barely, the ToC plugin is enabled by default. All you need to do is place i
 ```
 
 For our blog, I have decided to never use `<h1>` headings within the post body. This size is reserved for the title of the post. The ToC doesn't know this, so an unnecessary layer is currently being generated. Additionally, I'd like to use ordered (numbered) lists instead of unordered (bullet point) lists. Appending the config with
-```yaml
+```toml
 TOC:
   LIST_ELEMENT: "ol"
   MIN_DEPTH: 2
@@ -129,7 +129,7 @@ This is the most important feature of our blog, and the last one we will look at
 barely calls this feature *collections*. Pages can be part of any number of collections, and can exhibit any number of collections. Additionally, barely can generate a page for every collection listing all associated posts, as well as an overview page listing all collections.
 
 It's easiest to understand when seen in action, so let's append our project configuration once more:
-```yaml
+```toml
 COLLECTIONS:
   PAGE: "tags"
   COLLECTION_TEMPLATE: "tag.html"
@@ -172,7 +172,7 @@ As we can see, we simply display the relevant data about each collectible, provi
 The last two options of the configuration, `ORDER_KEY` and `ORDER_REVERSE` allow us to tell barely how to sort collectibles within collection pages or exhibitions. Here, we chose to sort by date, in descending order.
 
 If you rebuilt the project right now, you might notice that neither the overview page, nor any collection pages are being generated. That's because we haven't created any collections yet! How do we do that? Well, we simply tell barely "this post is part of that collection"!
-```yaml
+```toml
 title:  "Hello World!"
 created: "2022-04-01"
 collections:
@@ -210,7 +210,7 @@ You want your blog to be built every time you push to the main branch. The neces
 - push the result to a new branch
 
 The following action does just that (though it could definitely be improved upon):
-```yaml
+```toml
 name: build
 on:
   push:
