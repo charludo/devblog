@@ -15,26 +15,17 @@
 	</image>
     <atom:link href="https://notablog.io/rss" rel="self" type="application/rss+xml" />
     <description>just an outlet for occasionally interesting personal side projects.</description>
-    <pubDate>2022-04-03</pubDate>
+    <pubDate>2022-04-07</pubDate>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
 	<category>technology</category>
 
     
     <item>
-       <title>Example Blogpost2</title>
-       <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</description>
-       <pubDate>2022-04-03</pubDate>
-       <guid isPermaLink="true">https://notablog.io/blog/example2/index.html</guid>
-       <link>https://notablog.io/blog/example2/index.html</link>
-       <dc:creator><![CDATA[Charlotte]]></dc:creator>
-    </item>
-    
-    <item>
-       <title>Example Blogpost</title>
-       <description>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</description>
-       <pubDate>2022-04-01</pubDate>
-       <guid isPermaLink="true">https://notablog.io/blog/example/index.html</guid>
-       <link>https://notablog.io/blog/example/index.html</link>
+       <title>Building a blog with barely</title>
+       <description>Building a blog upon the foundations of a static site generator might appear to be counterintuitive. After all, aren't frequent updates the point, and blogs therefore inherently dynamic? But alas: we can have our cake and eat it, too!</description>
+       <pubDate>2022-04-07</pubDate>
+       <guid isPermaLink="true">https://notablog.io/blog/2022-04-01-building-a-blog-with-barely/index.html</guid>
+       <link>https://notablog.io/blog/2022-04-01-building-a-blog-with-barely/index.html</link>
        <dc:creator><![CDATA[Charlotte]]></dc:creator>
     </item>
     
